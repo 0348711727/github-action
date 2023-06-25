@@ -1,13 +1,13 @@
 name: Shell Commands
 
-on: [push]
+on: 
+  push: 
+    branches: [main]
 
 jobs:
-  run-shell-command: 
+  say-hello:
     runs-on: ubuntu-latest
     steps:
-      - name: echo a string
-      run: echo "Hello world"
       - name: multiline script
       run: |
         node -v
