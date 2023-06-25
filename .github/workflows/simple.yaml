@@ -15,7 +15,7 @@ jobs:
         run: |
           node -v
           npm -v
-      - name: today is
+      # - name: today is
         - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
         - run: echo today is $TODAY
         - run: echo "Hello"
