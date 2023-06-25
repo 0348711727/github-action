@@ -18,3 +18,4 @@ jobs:
       # - name: today is
         - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
         - run: echo today is $TODAY
+        - run: echo "Hello"
