@@ -13,4 +13,4 @@ jobs:
           node -v
           npm -v
       -name: console.log
-        run: echos "Hello"
+        run: echo "Hello"
