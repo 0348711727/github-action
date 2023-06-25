@@ -6,12 +6,12 @@ jobs:
   run-shell-command: 
     runs-on: ubuntu-latest
     steps:
-      - name: echo a string
-        run: echo "Hello world"
-      - name: multiline script
-        run: |
-          node -v
-          npm -v
-      - name: today is
-        run: echo "TODAY=$(date + %y-%m-%d)"
-        run: echo today is $TODAY
+      # - name: echo a string
+        # run: echo "Hello world"
+      # - name: multiline script
+        # run: |
+          # node -v
+          # npm -v
+      # - name: today is
+        - run: echo "TODAY=$(date + %y-%m-%d)"
+        - run: echo today is $TODAY
