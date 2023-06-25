@@ -12,3 +12,5 @@ jobs:
         run: |
           node -v
           npm -v
+      - name: today is
+        run: echo Date.now()
