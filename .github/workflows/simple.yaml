@@ -6,24 +6,24 @@ on:
       - '**.js'
   workflow_dispatch:
 jobs:
-  # run-shell-command: 
-  #   runs-on: ubuntu-latest
-  #   steps:
-      # - name: echo a string
-        # run: echo "Hello world"
-      # - name: multiline script
-        # run: |
-          # node -v
-          # npm -v
-      # - name: today is
-        # - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
-        # - run: echo today is $TODAY
-        # - run: echo "Hello"
-        # - name: python tes
-        #   run: |
-        #     import platform
-        #     print(platform.processor())
-        #   shell: python
+  run-shell-command: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run: echo "Hello world"
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
+      - name: today is
+        - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
+        - run: echo today is $TODAY
+        - run: echo "Hello"
+        - name: python tes
+          run: |
+            import platform
+            print(platform.processor())
+          shell: python
   run-windows-commands:
     runs-on: windows-latest
       steps: 
