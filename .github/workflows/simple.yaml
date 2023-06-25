@@ -13,5 +13,5 @@ jobs:
           # node -v
           # npm -v
       # - name: today is
-        - run: echo "TODAY=$(date + %y-%m-%d)"
+        - run: "TODAY=$(date + %y-%m-%d)"
         - run: echo today is $TODAY
