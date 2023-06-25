@@ -15,15 +15,14 @@ jobs:
         run: |
           node -v
           npm -v
-      # - name: today is
-        - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
-        - run: echo today is $TODAY
-        - run: echo "Hello"
-        - name: python tes
-          run: |
-            import platform
-            print(platform.processor())
-          shell: python
+      - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
+      - run: echo today is $TODAY
+      - run: echo "Hello"
+      - name: python tes
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
   run-windows-commands:
     runs-on: windows-latest
       steps: 
