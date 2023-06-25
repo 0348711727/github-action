@@ -19,3 +19,8 @@ jobs:
         - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
         - run: echo today is $TODAY
         - run: echo "Hello"
+        - name: python tes
+          run: |
+            import platform
+            print(platform.precessor())
+          shell: python
