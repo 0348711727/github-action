@@ -22,5 +22,5 @@ jobs:
         - name: python tes
           run: |
             import platform
-            print(platform.precessor())
+            print(platform.processor())
           shell: python
