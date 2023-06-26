@@ -28,4 +28,8 @@ jobs:
     steps: 
       - name: Directory PowerShell
         run: Get-Location
+      - name: List Files
+        run: | 
+          pwd
+          ls
 
