@@ -23,11 +23,6 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
-  run-windows-commands:
-    runs-on: windows-latest
-    steps: 
-      - name: Directory PowerShell
-        run: Get-Location
       - name: List Files
         run: | 
           pwd
@@ -38,6 +33,12 @@ jobs:
           echo "${{ github.token }}"
           # git clone git@github:$GITHUB_REPOSITORY
           # git checkout $GITHUB_SHA
+  run-windows-commands:
+    runs-on: windows-latest
+    steps: 
+      - name: Directory PowerShell
+        run: Get-Location
+
       - name: Checkout
         uses: actions/checkout@v1
       - name: List Files after checkout
