@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ECHO SOMeTHING
-        run: echo "ABC"
+        run: echo $GITHUB_REPOSITORY
