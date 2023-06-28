@@ -1,0 +1,11 @@
+name: TEST_ACTION PR
+
+on:
+  pull_request:
+    types: [closed, assigned, opened, reopened]
+jobs: 
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ECHO SOMeTHING
+        run: echo "ABC"
