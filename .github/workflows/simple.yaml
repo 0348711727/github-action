@@ -2,7 +2,7 @@ name: Shell Commands
 
 on:
   push: 
-    path:
+    paths:
       - '**.js'
   workflow_dispatch:
 jobs:
