@@ -11,8 +11,9 @@ jobs:
           git init
           git remote add origin https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git
           git fetch
-          git checkout master
-          git branch --set-upstream-to=origin/master
+          git branch -m dev-1
+          git checkout dev-1
+          git branch --set-upstream-to=origin/dev-1
           git pull
           echo $RANDOM >> random.txt
           git add .
