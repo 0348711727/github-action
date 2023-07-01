@@ -1,0 +1,20 @@
+name: Random file push
+
+on: [push]
+
+jobs:
+  run-shell-random:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Push random
+        run: |
+          git init
+          git remote add origin https://github.com/$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git
+          git fetch
+          git checkout dev-1
+          git branch --set-upstream-to=origin/dev-1
+          git pull
+          echo $RANDOM >> random.txt
+          git add .
+          git commit -m "test commit by github action"
+          git push
