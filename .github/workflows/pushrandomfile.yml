@@ -14,8 +14,8 @@ jobs:
           git config --global user.name "0348711727"
           git fetch
           # git branch -m dev-1
-          git checkout master
-          git branch --set-upstream-to=origin/master
+          git checkout main
+          git branch --set-upstream-to=origin/main
           git pull
           echo $RANDOM >> random.txt
           git add .
