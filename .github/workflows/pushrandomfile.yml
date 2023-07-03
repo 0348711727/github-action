@@ -10,11 +10,9 @@ jobs:
         run: |
           git init
           git remote add origin https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/${GITHUB_REPOSITORY}.git""
-          git config --global user.email "coccc1999@gmail.com"
-          git config --global user.name "0348711727"
-          # git config --global user.password "quang0348711727"
+          # git config --global user.email "coccc1999@gmail.com"
+          # git config --global user.name "0348711727"
           git fetch
-          # git branch -m dev-1
           git checkout dev
           git branch --set-upstream-to=origin/dev
           git pull
