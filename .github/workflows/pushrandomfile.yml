@@ -15,8 +15,8 @@ jobs:
           git config --global user.password "quang0348711727"
           git fetch
           # git branch -m dev-1
-          git checkout main
-          git branch --set-upstream-to=origin/main
+          git checkout dev
+          git branch --set-upstream-to=origin/dev
           git pull
           echo $RANDOM >> random.txt
           git add .
