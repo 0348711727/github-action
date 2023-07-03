@@ -6,7 +6,6 @@ jobs:
   run-shell-random:
     runs-on: ubuntu-latest
     steps: 
-      - uses: actions/checkout@v3
       - name: Push random
         run: |
           git init
