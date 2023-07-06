@@ -8,6 +8,12 @@ jobs:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
         node_version: [6, 8, 10]
+        include: 
+          - os: macos-latest
+            node_version: 4
+        exclude:
+          - os: [ubuntu-latest, macos-latest, windows-latest]
+            node_version: 8
     runs-on: ${{matrix.os}}
     steps:
       - name: Test Node version
