@@ -8,7 +8,7 @@ jobs:
       matrix:
         os: [macoc-latest, ubuntu-latest, window-latest]
         node_version: [6, 8, 10]
-    runs-on: ubuntu-latest
+    runs-on: ${{matrix.os}}
     steps:
       - name: Test Node version
         run: node -v
