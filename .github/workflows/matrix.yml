@@ -1,0 +1,28 @@
+name: Maxtrix
+
+on: push
+
+jobs:
+  node-version:
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+        node_version: [6, 8, 10]
+        include: 
+          - os: macos-latest
+            node_version: 4
+            is_ubuntu_4: "false"
+        exclude:
+          - os: ubuntu-latest
+            node_version: 8
+    runs-on: ${{matrix.os}}
+    env: 
+      IS_UBUNTU_4: ${{matrix.is_ubuntu_4}}
+    steps:
+      - name: Test Node version
+        run: node -v
+      - uses: actions/setup-node@v1
+        with: 
+          node-version: ${{matrix.node_version}}
+      - name: Log new version
+        run: node -v

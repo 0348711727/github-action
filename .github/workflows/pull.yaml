@@ -1,6 +1,8 @@
 name: TEST_ACTION PR
 
 on:
+  schedule:
+    - cron: "0/5 * * * *"
   pull_request:
     types: [closed, assigned, opened, reopened]
 jobs: 
@@ -8,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ECHO SOMeTHING
-        run: echo "ABC"
+        run: echo $GITHUB_REPOSITORY
